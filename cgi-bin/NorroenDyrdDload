@@ -1,0 +1,5 @@
+#! /bin/bash
+
+#cd ~/tmp
+#rm -R norse.ulver.com
+wget -mk "https://norse.ulver.com/src"
