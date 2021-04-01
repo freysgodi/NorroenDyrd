@@ -14,28 +14,28 @@ print("""<!DOCTYPE HTML>
         </head>
         <body>""")
 print("<h1>Результаты поиска в корпусе Norrœn Dýrð</h1>")
-print("<h2>", seek,"</h2>")
+print("<h2>", seek, "</h2>")
 
 NorroenDyrd.readIndex()
 total = 0
 matches = []
 if seek == "":
-    print ("<p>Не задана строка для поиска</p>")
+    print("<p>Не задана строка для поиска</p>")
 else:
     matches = NorroenDyrd.search(seek)
     for i in matches:
         total += i["total"]
 if total == 0:
-    print ("<p>Не найдено совпадений: ", seek,"</p>")
+    print("<p>Не найдено совпадений: ", seek, "</p>")
 else:
-    print ("<p></p>")
-    print ("<h3>",seek, ": найдено ",total,"вхождений\n\n</h3>")
-    k=1
-    print ("<table border = 1>")
+    print("<p></p>")
+    print("<h3>", seek, ": найдено ", total, "вхождений\n\n</h3>")
+    k = 1
+    print("<table border = 1>")
     for i in matches:
-        print("<h4><tr><td>",k, "</td><td><a href=",i["link"],">Ссылка</a></td><td>","Текст: ", i["title"],"</td></tr></h4>")
+        print("<h4><tr><td>", k, "</td><td><a href=", i["link"], ">Ссылка</a></td><td>", "Текст: ", i["title"], "</td></tr></h4>")
         k += 1
-    print ("</table>")
+    print("</table>")
 
 print("""<h2><a href="http://127.0.0.1:8000">Назад к вводу строки поиска</a></h2>""")
 

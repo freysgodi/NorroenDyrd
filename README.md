@@ -5,4 +5,4 @@
 <center><h2>Запуск и использование</h2></center>
 
 Запустите скрипт Start.bat. После этого сервис будет доступен через любой браузер. В адресную строку нужно вбить 
-<blockquote> 127.0.0.1:8000</blockquote> или <blockuqote>localhost:8000</blockquote>
+<blockquote> 127.0.0.1:8000</blockquote> или <blockquote>localhost:8000</blockquote>

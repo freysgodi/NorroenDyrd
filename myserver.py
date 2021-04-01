@@ -3,7 +3,6 @@
 
 from http.server import HTTPServer, CGIHTTPRequestHandler
 import configparser
-import cgi
 
 config = configparser.ConfigParser()
 config.read("config.ini")

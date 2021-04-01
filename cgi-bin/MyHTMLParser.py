@@ -4,12 +4,15 @@ class MyHTMLParser(HTMLParser):
     tFlag = False
     plaintext = ""
     title = ""
+
     def handle_starttag(self, tag, attrs):
         if tag == "title":
             self.tFlag = True
+
     def handle_endtag(self, tag):
         if tag == "title":
             self.tFlag = False
+
     def handle_data(self, data):
         if self.tFlag:
             self.title = data

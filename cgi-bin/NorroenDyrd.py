@@ -2,7 +2,6 @@ class NorroenDyrd:
 
     import configparser
 
-
     config = configparser.ConfigParser()
     config.read("config.ini")
 
@@ -34,12 +33,11 @@ class NorroenDyrd:
     def removeMirror():
         import os
 
-        for (p,d,f) in os.walk(NorroenDyrd.root + "/files/norse.ulver.com"):
+        for (p, d, f) in os.walk(NorroenDyrd.root + "/files/norse.ulver.com"):
             for fn in f:
-                os.remove(os.path.join(p,fn))
+                os.remove(os.path.join(p, fn))
             for dn in d:
-                os.rmdir(os.path.join(p,dn))
-        #os.rmdir(NorroenDyrd.root + "/files/norse.ulver.com")
+                os.rmdir(os.path.join(p, dn))
 
     @staticmethod
     def setIndex():
@@ -101,7 +99,7 @@ class NorroenDyrd:
             pos = -1
             while True:
                 pos = h["text"].find(seek, pos+1)
-                if  pos != -1:
+                if pos != -1:
                     counter += 1
                 else:
                     break
